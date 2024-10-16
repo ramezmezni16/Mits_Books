@@ -1,0 +1,232 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #1b1b1b; /* Dark background */
+    color: #e0e0e0; /* Light grey text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #2c2c2c; /* Darker header */
+    color: #ffffff; /* White text */
+    padding: 1rem 2rem; /* Reduced padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-size: 2rem; /* Reduced font size */
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem; /* Adjusted margin */
+}
+
+.nav-links a {
+    color: #ffffff; /* White links */
+    text-decoration: none;
+    font-size: 1rem; /* Reduced font size */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4500; /* Bright orange on hover */
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    background: url('bookstore-hero.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    color: #ffffff; /* White text */
+    padding: 2rem;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero button {
+    background-color: #ff4500; /* Bright orange button */
+    color: #ffffff; /* White text */
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero button:hover {
+    background-color: #ff6347; /* Lighter orange on hover */
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about, .books, .contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #2c2c2c; /* Dark background for sections */
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about h2, .books h2, .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* White headings */
+    font-family: 'Playfair Display', serif;
+}
+
+.about p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Books Section */
+.book-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    background-color: #3a3a3a; /* Dark grey for book items */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    padding: 1.5rem;
+    width: 280px;
+    text-decoration: none;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ff4500; /* Bright orange border */
+}
+
+.book-item h3 {
+    font-size: 1.5rem;
+    color: #ffffff; /* White text for titles */
+    margin: 1rem 0 0.5rem;
+}
+
+.book-item p {
+    font-size: 1rem;
+    color: #dddddd; /* Light grey for descriptions */
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 0.8rem;
+    border: 1px solid #444; /* Dark border */
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff4500; /* Bright orange on focus */
+    outline: none;
+}
+
+form button {
+    background-color: #ff4500; /* Bright orange button */
+    color: #ffffff; /* White text */
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #ff6347; /* Lighter orange on hover */
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c2c2c; /* Dark footer */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
